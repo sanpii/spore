@@ -4,14 +4,14 @@
         "silex/silex": "1.0.*@dev",
         "pomm/pomm": "*@stable",
         "pomm/pomm-service-provider": "*@dev",
-        "twig/twig": "*@stable"
+        "twig/twig": "*@stable",
         "twitter/bootstrap": "*@stable",
         "leafo/lessphp": "*@stable"
     },
     "scripts": {
-        "post-update-cmd": "Sanpi\\Cist\\Script\\Installer::postUpdate"
+        "post-update-cmd": "Installer::postUpdate"
     },
-    "require-dev": {
-        "atoum/atoum": "*@stable"
+    "autoload": {
+        "psr-0": { "": "src/" }
     }
 }

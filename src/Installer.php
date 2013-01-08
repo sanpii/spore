@@ -1,7 +1,5 @@
 <?php
 
-namespace Sanpi\Cist\Script;
-
 use Composer\Script\Event;
 
 class Installer

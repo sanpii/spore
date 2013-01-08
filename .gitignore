@@ -1,6 +1,6 @@
 composer.lock
+src/config/current.php
 vendor
 web/js/bootstrap-*.js
 web/css/bootstrap.css
 web/img/glyphicons-*.png
-src/Sanpi/Cist/Resources/config/current.php

@@ -6,10 +6,10 @@ use Symfony\Component\HttpFoundation\Request;
 
 $app = new Silex\Application();
 
-$app['config'] = require __DIR__ . '/Sanpi/Cist/Resources/config/current.php';
+$app['config'] = require __DIR__ . '/config/current.php';
 
 $app->register(new TwigServiceProvider(), array(
-    'twig.path' => __DIR__ . '/Sanpi/Cist/Resources/views',
+    'twig.path' => __DIR__ . '/views',
 ));
 
 $app->register(new PommServiceProvider(), array(
