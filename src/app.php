@@ -17,7 +17,7 @@ $app->register(new PommServiceProvider(), array(
 ));
 
 $app->get('/', function(Request $request) use($app) {
-    return $app['twig']->render('index.twig.html');
+    return $app['twig']->render('index.html.twig');
 });
 
 return $app;
