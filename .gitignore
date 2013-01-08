@@ -1,2 +1,5 @@
 composer.lock
 vendor
+web/js/bootstrap-*.js
+web/css/bootstrap.css
+web/img/glyphicons-*.png

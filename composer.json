@@ -3,6 +3,11 @@
     "require": {
         "silex/silex": "1.0.*@dev",
         "twig/twig": "*@stable"
+        "twitter/bootstrap": "*@stable",
+        "leafo/lessphp": "*@stable"
+    },
+    "scripts": {
+        "post-update-cmd": "Sanpi\\Cist\\Script\\Installer::postUpdate"
     },
     "require-dev": {
         "atoum/atoum": "*@stable"
