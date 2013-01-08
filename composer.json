@@ -1,0 +1,10 @@
+{
+    "name": "sanpi/silex-bootstrap-skeleton",
+    "require": {
+        "silex/silex": "1.0.*@dev",
+        "twig/twig": "*@stable"
+    },
+    "require-dev": {
+        "atoum/atoum": "*@stable"
+    }
+}
