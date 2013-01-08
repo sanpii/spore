@@ -2,6 +2,8 @@
     "name": "sanpi/silex-bootstrap-skeleton",
     "require": {
         "silex/silex": "1.0.*@dev",
+        "pomm/pomm": "*@stable",
+        "pomm/pomm-service-provider": "*@dev",
         "twig/twig": "*@stable"
         "twitter/bootstrap": "*@stable",
         "leafo/lessphp": "*@stable"
