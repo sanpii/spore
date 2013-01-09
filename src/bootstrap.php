@@ -14,7 +14,7 @@ $app->register(new TwigServiceProvider(), array(
 ));
 
 $app->register(new PommServiceProvider(), array(
-    'pomm.databases' => $app['config']['pomm.dsn'],
+    'pomm.databases' => $app['config']['pomm'],
 ));
 
 return $app;
