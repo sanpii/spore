@@ -1,9 +1,9 @@
-# Silex bootstrap skeleton
+# Spore
 
 ## Installation
 
     $ curl http://getcomposer.org/installer | php
-    $ php composer.phar create-project sanpi/silex-bootstrap-skeleton
+    $ php composer.phar -s dev create-project sanpi/spore
 
 ## Configuration
 
@@ -14,7 +14,7 @@
 
     $ php -S localhost:8080 -t web/ web/index.php
 
-## Componants
+## Components
 
 ### Silex
 

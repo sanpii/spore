@@ -1,5 +1,5 @@
 {
-    "name": "sanpi/silex-bootstrap-skeleton",
+    "name": "sanpi/spore",
     "keywords": ["silex", "pomm", "bootstrap", "atoum", "behat", "skeleton"],
     "license": "MIT",
     "require": {
