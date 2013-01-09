@@ -1,4 +1,4 @@
-bin/atoum
+bin/*
 composer.lock
 src/config/current.php
 vendor

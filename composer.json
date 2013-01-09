@@ -1,6 +1,6 @@
 {
     "name": "sanpi/silex-bootstrap-skeleton",
-    "keywords": ["silex", "pomm", "bootstrap", "atoum", "skeleton"],
+    "keywords": ["silex", "pomm", "bootstrap", "atoum", "behat", "skeleton"],
     "license": "MIT",
     "require": {
         "silex/silex": "1.0.*@dev",
@@ -10,7 +10,9 @@
         "leafo/lessphp": "*@stable"
     },
     "require-dev": {
-        "atoum/atoum": "*@dev"
+        "atoum/atoum": "*@dev",
+        "sanpi/behatch-contexts": "*@dev",
+        "behat/mink-goutte-driver": "*"
     },
     "scripts": {
         "post-update-cmd": "Installer::postUpdate"
