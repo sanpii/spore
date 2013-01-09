@@ -1,7 +1,7 @@
 {
     "name": "sanpi/silex-bootstrap-skeleton",
-    "keywords": ["silex", "pomm", "bootstrap", "skeleton"],
-    "licence": "MIT",
+    "keywords": ["silex", "pomm", "bootstrap", "atoum", "skeleton"],
+    "license": "MIT",
     "require": {
         "silex/silex": "1.0.*@dev",
         "pomm/pomm": "*@stable",
@@ -9,8 +9,14 @@
         "twitter/bootstrap": "*@stable",
         "leafo/lessphp": "*@stable"
     },
+    "require-dev": {
+        "atoum/atoum": "*@dev"
+    },
     "scripts": {
         "post-update-cmd": "Installer::postUpdate"
+    },
+    "config": {
+        "bin-dir": "bin"
     },
     "autoload": {
         "psr-0": { "": "src/" }
