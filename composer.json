@@ -1,5 +1,7 @@
 {
     "name": "sanpi/silex-bootstrap-skeleton",
+    "keywords": ["silex", "pomm", "bootstrap", "skeleton"],
+    "licence": "MIT",
     "require": {
         "silex/silex": "1.0.*@dev",
         "pomm/pomm": "*@stable",
