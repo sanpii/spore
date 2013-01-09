@@ -6,7 +6,7 @@ class Installer
 {
     public static function postUpdate(Event $event)
     {
-        $rootDir = __DIR__ . '/../../../../';
+        $rootDir = __DIR__ . '/../';
         $webDir = "$rootDir/web";
         $bootstrapDir = "$rootDir/vendor/twitter/bootstrap/twitter/bootstrap/";
 
