@@ -4,7 +4,17 @@ use \Composer\Script\Event;
 
 class Installer
 {
-    public static function postUpdate(Event $event)
+    static public function postInstall(Event $event)
+    {
+        self::installBootstrap();
+    }
+
+    static public function postUpdate(Event $event)
+    {
+        self::installBootstrap();
+    }
+
+    static private function installBootstrap()
     {
         $rootDir = __DIR__ . '/../';
         $webDir = "$rootDir/web";

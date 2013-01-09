@@ -15,6 +15,7 @@
         "behat/mink-goutte-driver": "*"
     },
     "scripts": {
+        "post-install-cmd": "Installer::postInstall",
         "post-update-cmd": "Installer::postUpdate"
     },
     "config": {
