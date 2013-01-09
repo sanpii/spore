@@ -1,7 +1,6 @@
 <?php
 
-use Pomm\Silex\PommServiceProvider;
-use Silex\Provider\TwigServiceProvider;
+use \Silex\Provider\TwigServiceProvider;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

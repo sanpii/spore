@@ -1,6 +1,6 @@
 <?php
 
-use Composer\Script\Event;
+use \Composer\Script\Event;
 
 class Installer
 {

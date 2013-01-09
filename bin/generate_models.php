@@ -1,9 +1,11 @@
 #! /usr/bin/env php
 <?php
 
+use \Pomm\Tools\ScanSchemaTool;
+
 $app = require __DIR__ . '/../src/bootstrap.php';
 
-$scan = new Pomm\Tools\ScanSchemaTool(array(
+$scan = new ScanSchemaTool(array(
     'schema' => isset($argv[1]) ? $argv[1] : 'public',
     'database' => $app['pomm']->getDatabase(),
     'namespace' => 'Model',
