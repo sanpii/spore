@@ -1,5 +1,6 @@
 {
     "name": "sanpi/spore",
+    "description": "Quickly create your next awesome PHP project based on silex, pomm, bootstrap, atoum and behat",
     "keywords": ["silex", "pomm", "bootstrap", "atoum", "behat", "skeleton"],
     "license": "MIT",
     "require": {
