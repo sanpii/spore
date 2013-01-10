@@ -12,6 +12,8 @@ $app = new Silex\Application();
 
 $app['config'] = require __DIR__ . '/config/current.php';
 
+$app['debug'] = $app['config']['debug'];
+
 $app->register(new TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/views',
 ));
