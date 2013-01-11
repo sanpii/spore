@@ -14,6 +14,12 @@
 
     $ php -S localhost:8080 -t web/ web/index.php
 
+## Test
+
+### Unitary
+
+    $ ./bin/atoum -d tests
+
 ## Components
 
 ### Silex
