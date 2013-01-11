@@ -20,6 +20,11 @@
 
     $ ./bin/atoum -d tests
 
+### Functionally
+
+    $ cp behat.yml{-dist,}
+    $ ./bin/behat
+
 ## Components
 
 ### Silex
