@@ -3,11 +3,11 @@
 ## Installation
 
     $ curl http://getcomposer.org/installer | php
-    $ php composer.phar -s dev create-project sanpi/spore
+    $ php composer.phar -sdev create-project sanpi/spore
 
 ## Configuration
 
-    $ cd src/Sanpi/Cist/Resources/config
+    $ cd src/config
     $ ln -s development.php current.php
 
 ## Run
