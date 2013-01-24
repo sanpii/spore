@@ -15,6 +15,9 @@
         "sanpi/behatch-contexts": "*@dev",
         "behat/mink-goutte-driver": "*"
     },
+    "suggest": {
+        "FortAwesome/Font-Awesome": "The iconic font designed for use with Twitter Bootstrap"
+    },
     "scripts": {
         "post-install-cmd": "Installer::postInstall",
         "post-update-cmd": "Installer::postUpdate"
