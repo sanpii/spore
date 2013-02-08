@@ -1,6 +1,9 @@
 <?php
 
 use \Silex\Provider\TwigServiceProvider;
+use \Silex\Provider\WebProfilerServiceProvider;
+use \Silex\Provider\UrlGeneratorServiceProvider;
+use \Silex\Provider\ServiceControllerServiceProvider;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -25,5 +28,16 @@ $app['pomm.service'] = $app->share(function() use ($app) {
 $app['pomm'] = function() use ($app) {
     return $app['pomm.service']->createConnection();
 };
+
+if (class_exists('\Silex\Provider\WebProfilerServiceProvider')) {
+    $app->register(new UrlGeneratorServiceProvider());
+    $app->register(new ServiceControllerServiceProvider());
+
+    $profiler = new WebProfilerServiceProvider();
+    $app->register($profiler, array(
+        'profiler.cache_dir' => __DIR__ . '/../cache/profiler',
+    ));
+    $app->mount('/_profiler', $profiler);
+}
 
 return $app;
