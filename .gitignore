@@ -2,6 +2,7 @@ behat.yml
 bin/*
 cache/
 composer.lock
+composer.phar
 src/config/current.php
 vendor
 web/js/bootstrap-*.js
