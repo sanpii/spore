@@ -1,4 +1,6 @@
 default:
+    paths:
+        features: tests/Features
     extensions:
         Behat\MinkExtension\Extension:
             base_url: 'http://localhost:8080'
