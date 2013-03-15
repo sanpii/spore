@@ -15,5 +15,5 @@ before_script:
     - php composer.phar install --dev
 
 script:
-    - ./bin/atoum -d tests/Units/
+    - ./bin/atoum
     - ./bin/behat -fprogress

@@ -20,7 +20,7 @@
 
 ### Unitary
 
-    $ ./bin/atoum -d tests
+    $ ./bin/atoum
 
 ### Functionally
 
