@@ -1,5 +1,7 @@
 # Spore
 
+[![Build Status](https://travis-ci.org/sanpii/spore.png)](https://travis-ci.org/sanpii/spore)
+
 ## Installation
 
     $ curl http://getcomposer.org/installer | php
