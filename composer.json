@@ -13,13 +13,6 @@
     },
     "require-dev": {
         "silex/web-profiler": "1.0.*@dev",
-        "symfony/web-profiler-bundle": "@dev",
-        "symfony/stopwatch": "@dev",
-        "symfony/http-kernel": "@dev",
-        "symfony/routing": "@dev",
-        "symfony/http-foundation": "@dev",
-        "symfony/event-dispatcher": "@dev",
-        "symfony/twig-bridge": "@dev",
         "atoum/atoum": "*@dev",
         "sanpi/behatch-contexts": "*@dev",
         "behat/mink-goutte-driver": "*"
