@@ -1,6 +1,8 @@
 # Spore
 
-[![Build Status](https://travis-ci.org/sanpii/spore.png)](https://travis-ci.org/sanpii/spore)
+[![Build Status](https://travis-ci.org/sanpii/spore.png?branch=master)](https://travis-ci.org/sanpii/spore)
+
+For create an application with authentification, see the `security` branch.
 
 ## Installation
 
