@@ -5,6 +5,7 @@
     "license": "MIT",
     "require": {
         "silex/silex": "*@dev",
+        "symfony/security": "*",
         "pomm/pomm": "*",
         "twig/twig": "*",
         "sanpi/twitter-bootstrap-installer": "*@dev"

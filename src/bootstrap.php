@@ -1,6 +1,8 @@
 <?php
 
 use \Silex\Provider\TwigServiceProvider;
+use \Silex\Provider\SessionServiceProvider;
+use \Silex\Provider\SecurityServiceProvider;
 use \Silex\Provider\WebProfilerServiceProvider;
 use \Silex\Provider\UrlGeneratorServiceProvider;
 use \Silex\Provider\ServiceControllerServiceProvider;
@@ -20,6 +22,9 @@ $app['debug'] = $app['config']['debug'];
 $app->register(new TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/views',
 ));
+
+$app->register(new SessionServiceProvider());
+$app->register(new SecurityServiceProvider());
 
 $app['pomm.service'] = $app->share(function() use ($app) {
     return new Pomm\Service($app['config']['pomm']);

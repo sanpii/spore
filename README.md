@@ -1,6 +1,6 @@
 # Spore
 
-[![Build Status](https://travis-ci.org/sanpii/spore.png)](https://travis-ci.org/sanpii/spore)
+[![Build Status](https://travis-ci.org/sanpii/spore.png?branch=security)](https://travis-ci.org/sanpii/spore)
 
 ## Installation
 

@@ -1,0 +1,10 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <form action="/admin/login_check" method="post" class="form-signin">
+        <h2>Please sign in</h2>
+        <input type="text" class="input-block-level" name="_username" value="{{ last_username }}" placeholder="Username" />
+        <input type="password" class="input-block-level" name="_password" placeholder="Password" />
+        <button type="submit" class="btn btn-large btn-primary">Sign in</button>
+    </form>
+{% endblock %}

@@ -11,9 +11,26 @@
                 <ul class="nav nav-pills pull-right">
                     <li class="active"><a href="https://github.com/sanpii/spore">Sources</a></li>
                 </ul>
+
                 <h3 class="muted">Spore</h3>
+
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <ul class="nav">
+                            <li><a href="/">Home</a></li>
+                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                <li><a href="/logout">Logout</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
             </div>
             <hr />
+
+            {% if error is defined and error is not empty %}
+                <div class="alert alert-error">{{ error }}</div>
+            {% endif %}
+
             {% block content %}{% endblock %}
         </div>
     </body>
