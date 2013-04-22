@@ -1,5 +1,6 @@
 <?php
 
+use \Pomm\Silex\PommServiceProvider;
 use \Silex\Provider\TwigServiceProvider;
 use \Silex\Provider\WebProfilerServiceProvider;
 use \Silex\Provider\UrlGeneratorServiceProvider;
@@ -21,13 +22,10 @@ $app->register(new TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/views',
 ));
 
-$app['pomm.service'] = $app->share(function() use ($app) {
-    return new Pomm\Service($app['config']['pomm']);
-});
-
-$app['pomm'] = function() use ($app) {
-    return $app['pomm.service']->createConnection();
-};
+$app->register(new PommServiceProvider(), array(
+    'pomm.class_path' => __DIR__ . '/vendor/pomm',
+    'pomm.databases' => $app['config']['pomm'],
+));
 
 if (class_exists('\Silex\Provider\WebProfilerServiceProvider')) {
     $app->register(new UrlGeneratorServiceProvider());
