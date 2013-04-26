@@ -1,6 +1,7 @@
 # Spore
 
 [![Build Status](https://travis-ci.org/sanpii/spore.png?branch=security)](https://travis-ci.org/sanpii/spore)
+[![Dependencies Status](https://www.wakuwakuw.com/d/7519698)](http://depending.in/sanpii/spore)
 
 ## Installation
 
