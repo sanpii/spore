@@ -10,7 +10,7 @@
         "sanpi/twitter-bootstrap-installer": "*@dev"
     },
     "require-dev": {
-        "silex/web-profiler": "*@dev",
+        "silex/web-profiler": "*",
         "atoum/atoum": "*@dev",
         "sanpi/behatch-contexts": "*@dev",
         "behat/mink-goutte-driver": "*"
