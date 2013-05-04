@@ -4,7 +4,7 @@
     "keywords": ["silex", "pomm", "bootstrap", "atoum", "behat", "skeleton"],
     "license": "MIT",
     "require": {
-        "silex/silex": "*@dev",
+        "silex/silex": "*",
         "symfony/security": "*",
         "pomm/pomm-service-provider": "*@dev",
         "twig/twig": "*",
