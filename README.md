@@ -1,9 +1,7 @@
 # Spore
 
-[![Build Status](https://travis-ci.org/sanpii/spore.png?branch=master)](https://travis-ci.org/sanpii/spore)
+[![Build Status](https://travis-ci.org/sanpii/spore.png?branch=rest)](https://travis-ci.org/sanpii/spore)
 [![Dependencies Status](https://www.wakuwakuw.com/d/7519698)](http://depending.in/sanpii/spore)
-
-For create an application with authentification, see the `security` branch.
 
 ## Installation
 
@@ -44,13 +42,6 @@ http://silex.sensiolabs.org/
 > for the Postgresql relational database.
 
 http://pomm.coolkeums.org/
-
-### Bootstrap
-
-> Sleek, intuitive, and powerful front-end framework for faster and easier web
-> development.
-
-http://twitter.github.com/bootstrap/
 
 ### Atoum
 

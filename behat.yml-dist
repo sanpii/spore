@@ -7,8 +7,6 @@ default:
             goutte: ~
         Sanpi\Behatch\Extension:
             contexts:
-                browser: ~
                 json:
                     evaluation_mode: javascript
-                table: ~
                 rest: ~
