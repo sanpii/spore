@@ -3,7 +3,10 @@
 [![Build Status](https://travis-ci.org/sanpii/spore.png?branch=master)](https://travis-ci.org/sanpii/spore)
 [![Dependencies Status](https://www.wakuwakuw.com/d/7519698)](http://depending.in/sanpii/spore)
 
-For create an application with authentification, see the `security` branch.
+Check other branches for create a specific application:
+
+* rest: create a REST API;
+* security: create a web application with user management.
 
 ## Installation
 
