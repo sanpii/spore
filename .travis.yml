@@ -8,6 +8,7 @@ before_script:
     - cp behat.yml{-dist,}
     - curl http://getcomposer.org/installer | php
     - php composer.phar install --dev --prefer-source
+    - cp src/config/development.php src/config/current.php
 
 script:
     - ./bin/atoum
