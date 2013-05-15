@@ -6,7 +6,7 @@
 ## Installation
 
     $ curl http://getcomposer.org/installer | php
-    $ php composer.phar -sdev create-project sanpi/spore
+    $ php composer.phar -sdev create-project sanpi/spore directory dev-rest
 
 ## Configuration
 
