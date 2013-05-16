@@ -7,4 +7,5 @@ src/config/current.php
 vendor
 web/js/bootstrap-*.js
 web/css/bootstrap.css
+web/css/bootstrap-responsive.css
 web/img/glyphicons-*.png
