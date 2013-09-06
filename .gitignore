@@ -5,7 +5,8 @@ composer.lock
 composer.phar
 src/config/current.php
 vendor
-web/js/bootstrap-*.js
+web/js/bootstrap/*
 web/css/bootstrap.css
 web/css/bootstrap-responsive.css
 web/img/glyphicons-*.png
+web/fonts/glyphicons-halflings-regular.*
