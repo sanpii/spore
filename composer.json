@@ -8,7 +8,7 @@
         "pomm/pomm-service-provider": "*@dev"
     },
     "require-dev": {
-        "atoum/atoum": "*@dev",
+        "atoum/atoum": "*",
         "sanpi/behatch-contexts": "*@dev",
         "behat/mink-goutte-driver": "*"
     },
