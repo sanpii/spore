@@ -11,7 +11,7 @@
     },
     "require-dev": {
         "silex/web-profiler": "*",
-        "atoum/atoum": "*@dev",
+        "atoum/atoum": "*",
         "sanpi/behatch-contexts": "*@dev",
         "behat/mink-goutte-driver": "*"
     },
