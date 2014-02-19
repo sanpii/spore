@@ -7,7 +7,7 @@
         "silex/silex": "*",
         "pomm/pomm-service-provider": "*@dev",
         "twig/twig": "*",
-        "sanpi/twitter-bootstrap-installer": "*@dev"
+        "sanpi/twitter-bootstrap-installer": "~1.1"
     },
     "require-dev": {
         "silex/web-profiler": "*",
