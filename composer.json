@@ -12,7 +12,8 @@
     "require-dev": {
         "silex/web-profiler": "*",
         "atoum/atoum": "*",
-        "sanpi/behatch-contexts": "*@dev",
+        "sanpi/behatch-contexts": "~2.0@dev",
+        "behat/mink-extension": "~2.0@dev",
         "behat/mink-goutte-driver": "*"
     },
     "suggest": {
@@ -27,7 +28,8 @@
     },
     "autoload": {
         "psr-0": { "": "src/" },
-        "psr-4": { "Test\\": "tests" }
+        "psr-4": { "Test\\": "tests" },
+        "files": ["tests/Features/bootstrap/FeatureContext.php"]
     },
     "extra": {
         "symfony-web-dir": "web"
