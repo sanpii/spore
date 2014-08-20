@@ -1,14 +1,7 @@
 <?php
 
-use Behat\Behat\Context\BehatContext;
-use Sanpi\Behatch\Context\BehatchContext;
-use Behat\MinkExtension\Context\MinkContext;
+use Behat\Behat\Context\Context;
 
-class FeatureContext extends BehatContext
+class FeatureContext implements Context
 {
-    public function __construct(array $parameters)
-    {
-        $this->useContext('mink', new MinkContext($parameters));
-        $this->useContext('behatch', new BehatchContext($parameters));
-    }
 }

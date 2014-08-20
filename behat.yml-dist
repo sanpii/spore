@@ -1,12 +1,12 @@
 default:
-    paths:
-        features: tests/Features
+    suites:
+        default:
+            paths: [ %paths.base%/tests/Features ]
+            contexts:
+                - Behat\MinkExtension\Context\MinkContext
+                - behatch:json
+                - behatch:rest
     extensions:
-        Behat\MinkExtension\Extension:
+        Behat\MinkExtension\ServiceContainer\MinkExtension:
             base_url: 'http://localhost:8080'
             goutte: ~
-        Sanpi\Behatch\Extension:
-            contexts:
-                json:
-                    evaluation_mode: javascript
-                rest: ~
