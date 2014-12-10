@@ -4,12 +4,17 @@
     "keywords": ["silex", "pomm", "atoum", "behat", "skeleton"],
     "license": "MIT",
     "require": {
-        "silex/silex": "*",
-        "pomm/pomm-service-provider": "*@dev",
+        "silex/silex": "~1.2",
+        "pomm-project/pomm-service-provider": "dev-silex-1",
+        "twig/twig": "~1.18",
         "symfony/yaml": "~2.6",
         "incenteev/composer-parameter-handler": "~2.1"
     },
     "require-dev": {
+        "silex/web-profiler": "~1.0",
+        "pomm-project/cli": "~2.0",
+        "pomm-project/pomm-symfony-bridge": "~2.0",
+        "pomm-project/pomm-profiler-service-provider": "dev-silex-1",
         "atoum/atoum": "~1.0",
         "behatch/contexts": "~2.0",
         "behat/mink-extension": "~2.0",
