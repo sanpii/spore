@@ -6,13 +6,22 @@
     "require": {
         "silex/silex": "*",
         "pomm/pomm-service-provider": "*@dev",
-        "symfony/yaml": "~2.6"
+        "symfony/yaml": "~2.6",
+        "incenteev/composer-parameter-handler": "~2.1"
     },
     "require-dev": {
         "atoum/atoum": "~1.0",
         "behatch/contexts": "~2.0",
         "behat/mink-extension": "~2.0",
         "behat/mink-goutte-driver": "*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
     },
     "config": {
         "bin-dir": "bin"
@@ -23,5 +32,10 @@
     "autoload-dev": {
         "psr-4": { "Test\\": "tests" },
         "files": ["tests/Features/bootstrap/FeatureContext.php"]
+    },
+    "extra": {
+        "incenteev-parameters": {
+            "file": "src/config/parameters.yml"
+        }
     }
 }

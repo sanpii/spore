@@ -3,5 +3,5 @@
 /cache/
 /composer.lock
 /composer.phar
-/src/config/current.yml
+/src/config/parameters.yml
 /vendor
