@@ -8,6 +8,7 @@
         "pomm/pomm-service-provider": "*@dev",
         "twig/twig": "*",
         "symfony/yaml": "~2.6",
+        "incenteev/composer-parameter-handler": "~2.1",
         "sanpi/twitter-bootstrap-installer": "~1.1"
     },
     "require-dev": {
@@ -21,8 +22,14 @@
         "FortAwesome/Font-Awesome": "The iconic font designed for use with Twitter Bootstrap"
     },
     "scripts": {
-        "post-install-cmd": "Sanpi\\TwitterBootstrap\\Composer\\ScriptHandler::postInstall",
-        "post-update-cmd": "Sanpi\\TwitterBootstrap\\Composer\\ScriptHandler::postUpdate"
+        "post-install-cmd": [
+            "Sanpi\\TwitterBootstrap\\Composer\\ScriptHandler::postInstall",
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Sanpi\\TwitterBootstrap\\Composer\\ScriptHandler::postUpdate",
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
     },
     "config": {
         "bin-dir": "bin"
@@ -35,6 +42,9 @@
         "files": ["tests/Features/bootstrap/FeatureContext.php"]
     },
     "extra": {
-        "symfony-web-dir": "web"
+        "symfony-web-dir": "web",
+        "incenteev-parameters": {
+            "file": "src/config/parameters.yml"
+        }
     }
 }

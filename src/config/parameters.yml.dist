@@ -1,0 +1,7 @@
+parameters:
+    debug: true
+    database_user: sanpi
+    database_password: 3.1416
+    database_host: localhost
+    database_port: 5432
+    database_name: spore
