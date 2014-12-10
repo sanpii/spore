@@ -11,9 +11,9 @@ use \PommProject\Silex\ProfilerServiceProvider\PommProfilerServiceProvider;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$app = new Silex\Application();
+$app = new \Silex\Application();
 
-$app['config'] = $app->share(function () {
+$app['config'] = function () {
     if (!is_file(__DIR__ . '/config/parameters.yml')) {
         throw new \RunTimeException('No current configuration file found in config.');
     }
@@ -35,7 +35,7 @@ $app['config'] = $app->share(function () {
     ];
 
     return $parameters;
-});
+};
 
 $app['debug'] = $app['config']['debug'];
 
