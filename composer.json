@@ -7,6 +7,7 @@
         "silex/silex": "*",
         "pomm/pomm-service-provider": "*@dev",
         "twig/twig": "*",
+        "symfony/yaml": "~2.6",
         "sanpi/twitter-bootstrap-installer": "~1.1"
     },
     "require-dev": {

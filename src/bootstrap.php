@@ -1,5 +1,6 @@
 <?php
 
+use \Symfony\Component\Yaml\Yaml;
 use \Pomm\Silex\PommServiceProvider;
 use \Silex\Provider\TwigServiceProvider;
 use \Silex\Provider\WebProfilerServiceProvider;
@@ -8,13 +9,15 @@ use \Silex\Provider\ServiceControllerServiceProvider;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-if (!is_file(__DIR__ . '/config/current.php')) {
+if (!is_file(__DIR__ . '/config/current.yml')) {
     throw new \RunTimeException('No current configuration file found in config.');
 }
 
 $app = new Silex\Application();
 
-$app['config'] = require __DIR__ . '/config/current.php';
+$app['config'] = function () {
+    return Yaml::parse(__DIR__ . '/config/current.yml');
+};
 
 $app['debug'] = $app['config']['debug'];
 
