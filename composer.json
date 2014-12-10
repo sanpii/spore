@@ -4,15 +4,16 @@
     "keywords": ["silex", "pomm", "bootstrap", "atoum", "behat", "skeleton"],
     "license": "MIT",
     "require": {
-        "silex/silex": "~1.2",
-        "pomm-project/pomm-service-provider": "dev-silex-1",
+        "silex/silex": "~2.0",
+        "pomm-project/pomm-service-provider": "dev-master",
         "twig/twig": "~1.18",
         "incenteev/composer-parameter-handler": "~2.1",
         "sanpi/twitter-bootstrap-installer": "~1.1"
     },
     "require-dev": {
+        "silex/web-profiler": "~2.0",
         "pomm-project/cli": "~2.0",
-        "pomm-project/pomm-profiler-service-provider": "dev-silex-1",
+        "pomm-project/pomm-profiler-service-provider": "dev-master",
         "atoum/atoum": "~2.0",
         "behatch/contexts": "~2.0",
         "behat/mink-goutte-driver": "*"

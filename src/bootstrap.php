@@ -3,7 +3,6 @@
 use \Symfony\Component\Yaml\Yaml;
 use \Silex\Provider\TwigServiceProvider;
 use \Silex\Provider\WebProfilerServiceProvider;
-use \Silex\Provider\UrlGeneratorServiceProvider;
 use \Silex\Provider\HttpFragmentServiceProvider;
 use \Silex\Provider\ServiceControllerServiceProvider;
 use \PommProject\Silex\ServiceProvider\PommServiceProvider;
@@ -11,9 +10,9 @@ use \PommProject\Silex\ProfilerServiceProvider\PommProfilerServiceProvider;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$app = new Silex\Application();
+$app = new \Silex\Application();
 
-$app['config'] = $app->share(function () {
+$app['config'] = function () {
     if (!is_file(__DIR__ . '/config/parameters.yml')) {
         throw new \RunTimeException('No current configuration file found in config.');
     }
@@ -36,7 +35,7 @@ $app['config'] = $app->share(function () {
     unset($config['parameters']);
 
     return $config;
-});
+};
 
 $app['debug'] = $app['config']['debug'];
 
@@ -49,7 +48,6 @@ $app->register(new PommServiceProvider(), [
 ]);
 
 if (class_exists('\Silex\Provider\WebProfilerServiceProvider')) {
-    $app->register(new UrlGeneratorServiceProvider);
     $app->register(new ServiceControllerServiceProvider);
     $app->register(new HttpFragmentServiceProvider);
 
