@@ -5,7 +5,8 @@
     "license": "MIT",
     "require": {
         "silex/silex": "*",
-        "pomm/pomm-service-provider": "*@dev"
+        "pomm/pomm-service-provider": "*@dev",
+        "symfony/yaml": "~2.6"
     },
     "require-dev": {
         "atoum/atoum": "~1.0",
