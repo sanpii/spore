@@ -8,9 +8,9 @@
         "pomm/pomm-service-provider": "*@dev"
     },
     "require-dev": {
-        "atoum/atoum": "*",
-        "sanpi/behatch-contexts": "~2.0@dev",
-        "behat/mink-extension": "~2.0@dev",
+        "atoum/atoum": "~1.0",
+        "behatch/contexts": "~2.0",
+        "behat/mink-extension": "~2.0",
         "behat/mink-goutte-driver": "*"
     },
     "config": {
