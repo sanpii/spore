@@ -3,7 +3,7 @@
 /cache/
 /composer.lock
 /composer.phar
-/src/config/current.php
+/src/config/current.yml
 /vendor
 /web/js/bootstrap
 /web/css/bootstrap.css
