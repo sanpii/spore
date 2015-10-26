@@ -1,13 +1,14 @@
 <?php
 
 use \Symfony\Component\Yaml\Yaml;
-use \Pomm\Silex\PommServiceProvider;
 use \Silex\Provider\TwigServiceProvider;
 use \Silex\Provider\SessionServiceProvider;
 use \Silex\Provider\SecurityServiceProvider;
 use \Silex\Provider\WebProfilerServiceProvider;
 use \Silex\Provider\UrlGeneratorServiceProvider;
 use \Silex\Provider\ServiceControllerServiceProvider;
+use \PommProject\Silex\ServiceProvider\PommServiceProvider;
+use \PommProject\Silex\ProfilerServiceProvider\PommProfilerServiceProvider;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -47,19 +48,20 @@ $app->register(new SessionServiceProvider());
 $app->register(new SecurityServiceProvider());
 
 $app->register(new PommServiceProvider(), array(
-    'pomm.class_path' => __DIR__ . '/vendor/pomm',
-    'pomm.databases' => $app['config']['pomm'],
+    'pomm.configuration' => $app['config']['pomm'],
 ));
 
 if (class_exists('\Silex\Provider\WebProfilerServiceProvider')) {
-    $app->register(new UrlGeneratorServiceProvider());
-    $app->register(new ServiceControllerServiceProvider());
+    $app->register(new UrlGeneratorServiceProvider);
+    $app->register(new ServiceControllerServiceProvider);
 
     $profiler = new WebProfilerServiceProvider();
     $app->register($profiler, array(
         'profiler.cache_dir' => __DIR__ . '/../cache/profiler',
     ));
     $app->mount('/_profiler', $profiler);
+
+    $app->register(new PommProfilerServiceProvider);
 }
 
 return $app;
