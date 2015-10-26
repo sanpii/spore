@@ -4,6 +4,7 @@ use \Symfony\Component\Yaml\Yaml;
 use \Silex\Provider\TwigServiceProvider;
 use \Silex\Provider\WebProfilerServiceProvider;
 use \Silex\Provider\UrlGeneratorServiceProvider;
+use \Silex\Provider\HttpFragmentServiceProvider;
 use \Silex\Provider\ServiceControllerServiceProvider;
 use \PommProject\Silex\ServiceProvider\PommServiceProvider;
 use \PommProject\Silex\ProfilerServiceProvider\PommProfilerServiceProvider;
@@ -49,6 +50,7 @@ $app->register(new PommServiceProvider(), array(
 if (class_exists('\Silex\Provider\WebProfilerServiceProvider')) {
     $app->register(new UrlGeneratorServiceProvider);
     $app->register(new ServiceControllerServiceProvider);
+    $app->register(new HttpFragmentServiceProvider);
 
     $profiler = new WebProfilerServiceProvider();
     $app->register($profiler, array(
