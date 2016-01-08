@@ -39,13 +39,13 @@ $app['config'] = $app->share(function () {
 
 $app['debug'] = $app['config']['debug'];
 
-$app->register(new TwigServiceProvider(), array(
+$app->register(new TwigServiceProvider(), [
     'twig.path' => __DIR__ . '/views',
-));
+]);
 
-$app->register(new PommServiceProvider(), array(
+$app->register(new PommServiceProvider(), [
     'pomm.configuration' => $app['config']['pomm'],
-));
+]);
 
 if (class_exists('\Silex\Provider\WebProfilerServiceProvider')) {
     $app->register(new UrlGeneratorServiceProvider);
@@ -53,9 +53,9 @@ if (class_exists('\Silex\Provider\WebProfilerServiceProvider')) {
     $app->register(new HttpFragmentServiceProvider);
 
     $profiler = new WebProfilerServiceProvider();
-    $app->register($profiler, array(
+    $app->register($profiler, [
         'profiler.cache_dir' => __DIR__ . '/../cache/profiler',
-    ));
+    ]);
     $app->mount('/_profiler', $profiler);
 
     $app->register(new PommProfilerServiceProvider);
