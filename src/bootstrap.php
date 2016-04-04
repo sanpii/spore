@@ -21,7 +21,7 @@ $app['config'] = $app->share(function () {
     $config = Yaml::parse(__DIR__ . '/config/parameters.yml');
     $parameters = $config['parameters'];
 
-    $parameters['pomm'] = [
+    $config['pomm'] = [
         $parameters['project_name'] => [
             'dsn' => sprintf(
                 "pgsql://%s:%s@%s:%s/%s",
@@ -33,8 +33,9 @@ $app['config'] = $app->share(function () {
             ),
         ],
     ];
+    unset($config['parameters']);
 
-    return $parameters;
+    return $config;
 });
 
 $app['debug'] = $app['config']['debug'];
