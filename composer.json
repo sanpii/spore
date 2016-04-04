@@ -13,7 +13,7 @@
     "require-dev": {
         "pomm-project/cli": "~2.0",
         "pomm-project/pomm-profiler-service-provider": "dev-silex-1",
-        "atoum/atoum": "~1.0",
+        "atoum/atoum": "~2.0",
         "behatch/contexts": "~2.0",
         "behat/mink-goutte-driver": "*"
     },
