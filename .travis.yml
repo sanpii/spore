@@ -13,7 +13,6 @@ before_script:
     - java -jar selenium.jar > /dev/null &
 
     - php -S localhost:8080 -t web/ web/index.php 2> /dev/null &
-    - cp behat.yml{-dist,}
     - curl http://getcomposer.org/installer | php
     - php composer.phar install --dev --prefer-source
 
