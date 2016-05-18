@@ -4,6 +4,7 @@
     "keywords": ["silex", "pomm", "bootstrap", "atoum", "behat", "skeleton"],
     "license": "MIT",
     "require": {
+        "php": ">=7.0",
         "silex/silex": "~2.0",
         "pomm-project/pomm-service-provider": "dev-master",
         "twig/twig": "~1.18",
