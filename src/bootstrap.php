@@ -1,13 +1,12 @@
 <?php
 declare(strict_types = 1);
 
+use \Silex\Provider;
 use \Symfony\Component\Yaml\Yaml;
-use \Silex\Provider\TwigServiceProvider;
-use \Silex\Provider\WebProfilerServiceProvider;
-use \Silex\Provider\HttpFragmentServiceProvider;
-use \Silex\Provider\ServiceControllerServiceProvider;
-use \PommProject\Silex\ServiceProvider\PommServiceProvider;
-use \PommProject\Silex\ProfilerServiceProvider\PommProfilerServiceProvider;
+use \PommProject\Silex\ {
+    ServiceProvider\PommServiceProvider,
+    ProfilerServiceProvider\PommProfilerServiceProvider
+};
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -40,7 +39,7 @@ $app['config'] = function () {
 
 $app['debug'] = $app['config']['debug'];
 
-$app->register(new TwigServiceProvider(), [
+$app->register(new Provider\TwigServiceProvider(), [
     'twig.path' => __DIR__ . '/views',
 ]);
 
@@ -48,11 +47,11 @@ $app->register(new PommServiceProvider(), [
     'pomm.configuration' => $app['config']['pomm'],
 ]);
 
-if (class_exists('\Silex\Provider\WebProfilerServiceProvider')) {
-    $app->register(new ServiceControllerServiceProvider);
-    $app->register(new HttpFragmentServiceProvider);
+if (class_exists(Provider\WebProfilerServiceProvider::class)) {
+    $app->register(new Provider\ServiceControllerServiceProvider);
+    $app->register(new Provider\HttpFragmentServiceProvider);
 
-    $profiler = new WebProfilerServiceProvider();
+    $profiler = new Provider\WebProfilerServiceProvider();
     $app->register($profiler, [
         'profiler.cache_dir' => __DIR__ . '/../cache/profiler',
     ]);
