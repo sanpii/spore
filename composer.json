@@ -6,7 +6,7 @@
     "require": {
         "php": ">=7.0",
         "silex/silex": "~2.0",
-        "pomm-project/pomm-service-provider": "dev-master",
+        "pomm-project/pomm-service-provider": "dev-silex-2",
         "twig/twig": "~1.18",
         "incenteev/composer-parameter-handler": "~2.1",
         "sanpi/twitter-bootstrap-installer": "~1.1"
@@ -14,7 +14,7 @@
     "require-dev": {
         "silex/web-profiler": "~2.0",
         "pomm-project/cli": "~2.0",
-        "pomm-project/pomm-profiler-service-provider": "dev-master",
+        "pomm-project/pomm-profiler-service-provider": "dev-silex-2",
         "atoum/atoum": "~2.0",
         "behatch/contexts": "~2.0",
         "behat/mink-goutte-driver": "*"
