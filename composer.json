@@ -8,8 +8,7 @@
         "silex/silex": "~2.0",
         "pomm-project/pomm-service-provider": "dev-silex-2",
         "twig/twig": "~1.18",
-        "incenteev/composer-parameter-handler": "~2.1",
-        "sanpi/twitter-bootstrap-installer": "~1.1"
+        "incenteev/composer-parameter-handler": "~2.1"
     },
     "require-dev": {
         "silex/web-profiler": "~2.0",
@@ -19,16 +18,11 @@
         "behatch/contexts": "~2.0",
         "behat/mink-goutte-driver": "*"
     },
-    "suggest": {
-        "FortAwesome/Font-Awesome": "The iconic font designed for use with Twitter Bootstrap"
-    },
     "scripts": {
         "post-install-cmd": [
-            "Sanpi\\TwitterBootstrap\\Composer\\ScriptHandler::postInstall",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
         ],
         "post-update-cmd": [
-            "Sanpi\\TwitterBootstrap\\Composer\\ScriptHandler::postUpdate",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
         ]
     },

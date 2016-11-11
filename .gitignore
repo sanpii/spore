@@ -5,8 +5,4 @@
 /composer.phar
 /src/config/parameters.yml
 /vendor
-/web/js/bootstrap
-/web/css/bootstrap.css
-/web/css/bootstrap-responsive.css
-/web/img/glyphicons-*.png
-/web/fonts/glyphicons-halflings-regular.*
+/web/lib

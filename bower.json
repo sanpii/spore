@@ -1,0 +1,6 @@
+{
+    "name": "sanpi/spore",
+    "dependencies": {
+        "bootstrap": "~3.0"
+    }
+}
