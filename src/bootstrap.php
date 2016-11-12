@@ -37,7 +37,9 @@ $app['config'] = function () {
     return $config;
 };
 
-$app['debug'] = $app['config']['debug'];
+$app['debug'] = function () {
+    return getenv('APP_DEBUG') !== 0 && getenv('APP_ENVIRONMENT') !== 'prod';
+};
 
 $app->register(new Provider\TwigServiceProvider(), [
     'twig.path' => __DIR__ . '/views',
@@ -54,8 +56,8 @@ if (class_exists(Provider\WebProfilerServiceProvider::class)) {
     $profiler = new Provider\WebProfilerServiceProvider();
     $app->register($profiler, [
         'profiler.cache_dir' => __DIR__ . '/../cache/profiler',
+        'profiler.mount_prefix' => '/_profiler',
     ]);
-    $app->mount('/_profiler', $profiler);
 
     $app->register(new PommProfilerServiceProvider);
 }
