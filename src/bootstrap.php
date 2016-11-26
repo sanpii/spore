@@ -41,11 +41,11 @@ $app['debug'] = function () {
     return getenv('APP_DEBUG') !== 0 && getenv('APP_ENVIRONMENT') !== 'prod';
 };
 
-$app->register(new Provider\TwigServiceProvider(), [
+$app->register(new Provider\TwigServiceProvider, [
     'twig.path' => __DIR__ . '/views',
 ]);
 
-$app->register(new PommServiceProvider(), [
+$app->register(new PommServiceProvider, [
     'pomm.configuration' => $app['config']['pomm'],
 ]);
 
@@ -53,8 +53,7 @@ if (class_exists(Provider\WebProfilerServiceProvider::class)) {
     $app->register(new Provider\ServiceControllerServiceProvider);
     $app->register(new Provider\HttpFragmentServiceProvider);
 
-    $profiler = new Provider\WebProfilerServiceProvider();
-    $app->register($profiler, [
+    $app->register(new Provider\WebProfilerServiceProvider, [
         'profiler.cache_dir' => __DIR__ . '/../cache/profiler',
         'profiler.mount_prefix' => '/_profiler',
     ]);
