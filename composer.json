@@ -14,7 +14,7 @@
         "pomm-project/cli": "~2.0",
         "pomm-project/pomm-profiler-service-provider": "dev-silex-2",
         "atoum/atoum": "~2.0",
-        "behatch/contexts": "~2.0",
+        "behatch/contexts": "~2.6|~3.0",
         "behat/mink-goutte-driver": "*"
     },
     "config": {
